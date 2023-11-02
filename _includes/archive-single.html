@@ -44,7 +44,7 @@
           {% if post.status == 'published' %}
             <p> {{post.declare}} <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
           {% elsif post.status == 'submitted' %}
-            <p> {{post.declare}}, <i>{{ post.venue }}</i> </p>
+            <p> {{post.declare}}, <i>{{ post.venue }}</i> {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
           {% elsif post.status == 'draft' %}
             <p> {{post.declare}} </p>
           {% endif %}
